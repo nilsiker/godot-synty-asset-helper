@@ -4,7 +4,7 @@ This addon helps import and prepare Synty asset packs for use in the Godot Engin
 
 > ⚠️ You will need access to the Synty source files. 
 > 
-> You can purchase the asset pack over at the [Synty Store](https://syntystore.com)
+> You can purchase Synty asset packs over at the [Synty Store](https://syntystore.com).
 
 ## Supported packs
 
