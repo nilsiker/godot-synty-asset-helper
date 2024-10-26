@@ -18,6 +18,7 @@ Before enabling this addon, see the [INSTALLATION](addons/godot_synty_asset_help
 
 ## Known issues and limitations
 
-- The addon currently only imports the **static mesh source files** as mesh resources.
+- The addon currently only imports **static mesh source files** as mesh resources.
+- Character import is not currently supported.
 - Custom shader materials are not supported.
 - Repeated re-enabling of the plugin can cause Godot to freeze and crash.

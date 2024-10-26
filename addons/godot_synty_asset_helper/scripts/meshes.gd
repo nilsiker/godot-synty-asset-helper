@@ -21,9 +21,9 @@ const BUILDING_DIR = MESHES_DIR + "buildings/"
 
 const PROP_PREFIX = "Prop_"
 const PROP_DIR = MESHES_DIR + "props/"
-	
+
 static func generate_from_source():
-	print("godot_synty_asset_helper: generating static meshes...")
+	print_rich("[color=blue]GODOT SYNTY ASSET HELPER: generating static meshes...")
 	DirAccess.make_dir_absolute(MESHES_DIR)
 	DirAccess.make_dir_absolute(ENVIRONMENT_DIR)
 	DirAccess.make_dir_absolute(ITEM_DIR)
@@ -37,14 +37,14 @@ static func generate_from_source():
 
 	var material_dict = MATERIALS.get_material_dict()
 
-	for file: String in mesh_files:
+	for file: String in fbx_files:
 		var filename = file.split(".")[0].trim_prefix("SM_")
 
 		if filename.ends_with("Optimized"):
 			push_warning("Skipping: Optimized FBXs not handled. ({1})".format([filename, file]))
 			continue
 
-		var fbx: PackedScene = load(FBX.SOURCE_DIR + file)
+		var fbx: PackedScene = load(file)
 
 		if not fbx:
 			push_warning("Failed to load {0}".format([file]))
@@ -61,16 +61,17 @@ static func generate_from_source():
 				var material: StandardMaterial3D = load(MATERIALS.DIRECTORY + mesh_material_names[0] + ".res")
 				mesh_instance.mesh.surface_set_material(0, material)
 
-			var mesh_name = filename + ".res"
-			var category_prefix = _get_category_prefix(filename)
-			var category_dir = _get_category_dir(filename)
+			var mesh_name = (mesh_instance.name + ".res").trim_prefix("SM_")
+			var category_prefix = _get_category_prefix(mesh_name)
+			var category_dir = _get_category_dir(mesh_name)
 			var mesh_path = category_dir + mesh_name.trim_prefix(category_prefix)
 
 			var res = ResourceSaver.save(mesh_instance.mesh, mesh_path)
 			if not res == OK:
 				push_error("Failed when saving scene {0} to {1}. Result: {2} ({3})".format([filename, mesh_path, res, file]))
 		node.queue_free()
-
+	print_rich("[color=blue]GODOT SYNTY ASSET HELPER: successfully created meshes")
+	
 
 static func _drill_for_mesh_instances(node: Node, mesh_instances: Array[MeshInstance3D]):
 	if node is MeshInstance3D:
@@ -80,7 +81,7 @@ static func _drill_for_mesh_instances(node: Node, mesh_instances: Array[MeshInst
 
 
 static func _is_static_mesh_file(file):
-	return file.begins_with(MESHES_PREFIX)
+	return file.split("/")[-1].begins_with(MESHES_PREFIX)
 
 static func _get_category_prefix(filename: String) -> String:
 	var prefix = filename.split("_")[0] + "_"

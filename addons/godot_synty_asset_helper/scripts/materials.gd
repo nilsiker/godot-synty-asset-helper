@@ -4,7 +4,7 @@ const MATERIAL_LIST_PATH = "res://addons/godot_synty_asset_helper/Source_Files/M
 const DIRECTORY = "res://addons/godot_synty_asset_helper/materials/"
 
 static func generate_from_source():
-	print("godot_synty_asset_helper: generating materials...")
+	print("GODOT SYNTY ASSET HELPER: generating materials...")
 	DirAccess.make_dir_absolute(DIRECTORY)
 
 	var file = FileAccess.open(MATERIAL_LIST_PATH, FileAccess.ModeFlags.READ)
@@ -31,10 +31,12 @@ static func generate_from_source():
 
 			var material = StandardMaterial3D.new()
 			material.albedo_texture = load(TEXTURES.SOURCE_DIRECTORY + texture_name + ".png")
+			material.vertex_color_use_as_albedo = false
 			var res = ResourceSaver.save(material, material_path)
 
 			if not res == OK:
 				push_error("\tFailed when creating material {0} to {1} (Result: {2})".format([material_name, material_path, res]))
+	print_rich("[color=blue]GODOT SYNTY ASSET HELPER: successfully created materials")
 
 
 static func get_material_dict() -> Dictionary:
