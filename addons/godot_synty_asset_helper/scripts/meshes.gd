@@ -1,8 +1,8 @@
-const MATERIALS = preload("res://addons/godot_synty_fantasy_kingdom/scripts/materials.gd")
-const FBX = preload("res://addons/godot_synty_fantasy_kingdom/scripts/fbx.gd")
+const MATERIALS = preload("res://addons/godot_synty_asset_helper/scripts/materials.gd")
+const FBX = preload("res://addons/godot_synty_asset_helper/scripts/fbx.gd")
 
 const MESHES_PREFIX = "SM_"
-const MESHES_DIR = "res://addons/godot_synty_fantasy_kingdom/meshes/"
+const MESHES_DIR = "res://addons/godot_synty_asset_helper/meshes/"
 
 const GENERIC_PREFIX = "Generic_"
 const GENERIC_DIR = MESHES_DIR + "generic/"
@@ -23,7 +23,7 @@ const PROP_PREFIX = "Prop_"
 const PROP_DIR = MESHES_DIR + "props/"
 	
 static func generate_from_source():
-	print("godot_synty_fantasy_kingdom: generating static meshes...")
+	print("godot_synty_asset_helper: generating static meshes...")
 	DirAccess.make_dir_absolute(MESHES_DIR)
 	DirAccess.make_dir_absolute(ENVIRONMENT_DIR)
 	DirAccess.make_dir_absolute(ITEM_DIR)

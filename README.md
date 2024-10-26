@@ -12,7 +12,7 @@ This addon helps import and prepare Synty asset packs for use in the Godot Engin
 
 ## Installation
 
-Before enabling this addon, see the [INSTALLATION](addons/godot_synty_fantasy_kingdom/INSTALLATION.md) steps:
+Before enabling this addon, see the [INSTALLATION](addons/godot_synty_asset_helper/INSTALLATION.md) steps:
 
 ## Known issues and limitations
 

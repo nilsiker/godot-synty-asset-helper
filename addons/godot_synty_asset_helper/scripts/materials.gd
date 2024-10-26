@@ -1,10 +1,10 @@
-const TEXTURES = preload("res://addons/godot_synty_fantasy_kingdom/scripts/textures.gd")
+const TEXTURES = preload("res://addons/godot_synty_asset_helper/scripts/textures.gd")
 
-const MATERIAL_LIST_PATH = "res://addons/godot_synty_fantasy_kingdom/Source_Files/MaterialList_PolygonFantasyKingdom.txt"
-const DIRECTORY = "res://addons/godot_synty_fantasy_kingdom/materials/"
+const MATERIAL_LIST_PATH = "res://addons/godot_synty_asset_helper/Source_Files/MaterialList_PolygonFantasyKingdom.txt"
+const DIRECTORY = "res://addons/godot_synty_asset_helper/materials/"
 
 static func generate_from_source():
-	print("godot_synty_fantasy_kingdom: generating materials...")
+	print("godot_synty_asset_helper: generating materials...")
 	DirAccess.make_dir_absolute(DIRECTORY)
 
 	var file = FileAccess.open(MATERIAL_LIST_PATH, FileAccess.ModeFlags.READ)
