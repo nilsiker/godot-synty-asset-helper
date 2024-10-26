@@ -8,7 +8,9 @@ This addon helps import and prepare Synty asset packs for use in the Godot Engin
 
 ## Supported packs
 
-* [POLYGON - Fantasy Kingdom Pack](https://syntystore.com/products/polygon-fantasy-kingdom)
+The addon currently supports the following packs:
+
+* [POLYGON - Fantasy Kingdom Pack (Source Files V3)](https://syntystore.com/products/polygon-fantasy-kingdom)
 
 ## Installation
 
