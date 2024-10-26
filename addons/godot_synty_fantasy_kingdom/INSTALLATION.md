@@ -1,8 +1,4 @@
-# Godot Synty Fantasy Kingdom
-
-This addon helps import and prepare the Synty Fantasy Kingdom asset pack for use in the Godot Engine.
-
-## Installation
+# Installating Godot Synty Fantasy Kingdom
 
 Before enabling this addon, perform the following steps:
 
@@ -13,8 +9,4 @@ Before enabling this addon, perform the following steps:
     
     > As the source files should not change, you can hide them from the Godot Engine after the initial import.
 
-## Known issues
-
-- The Synty source files beginning with `SK_` are currently not supported.
-- Custom shader materials are not currently not supported
-- Repeated re-enabling of the plugin causes Godot to freeze and crash.
+After this you should be set
