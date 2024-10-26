@@ -14,7 +14,7 @@ The addon currently supports the following packs:
 
 ## Installation
 
-Before enabling this addon, see the [INSTALLATION](addons/godot_synty_asset_helper/INSTALLATION.md) steps:
+Before enabling this addon, see the [INSTALLATION](addons/godot_synty_asset_helper/INSTALLATION.md) steps.
 
 ## Known issues and limitations
 
