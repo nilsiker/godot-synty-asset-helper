@@ -17,3 +17,8 @@ config/icon="res://icon.svg"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_synty_asset_helper/plugin.cfg")
+
+[godot_synty_asset_helper]
+
+export_folder="res://assets/synty/"
+organize_by_resource_type=false

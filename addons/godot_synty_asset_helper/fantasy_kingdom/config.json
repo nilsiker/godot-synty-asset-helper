@@ -1,0 +1,32 @@
+{
+    "name": "POLYGON - Fantasy Kingdom",
+    "folder": "res://addons/godot_synty_asset_helper/fantasy_kingdom",
+    "source_files": "res://addons/godot_synty_asset_helper/fantasy_kingdom/Source_Files/",
+    "materials": {
+        "mapping": "res://addons/godot_synty_asset_helper/fantasy_kingdom/Source_Files/MaterialList_PolygonFantasyKingdom.txt",
+        "source": "res://addons/godot_synty_asset_helper/fantasy_kingdom/Source_Files/Textures/",
+        "target_folder": "res://addons/godot_synty_asset_helper/fantasy_kingdom/materials/"
+    },
+    "meshes": {
+        "mapping": {
+            "Default": "res://addons/godot_synty_asset_helper/fantasy_kingdom/meshes/",
+            "SM_Prop_": "res://addons/godot_synty_asset_helper/fantasy_kingdom/meshes/props/",
+            "SM_Item_": "res://addons/godot_synty_asset_helper/fantasy_kingdom/meshes/items/",
+            "SM_Bld_": "res://addons/godot_synty_asset_helper/fantasy_kingdom/meshes/buildings/",
+            "SM_Env_": "res://addons/godot_synty_asset_helper/fantasy_kingdom/meshes/environment/",
+            "SM_Wep_": "res://addons/godot_synty_asset_helper/fantasy_kingdom/meshes/weapons/"
+        },
+        "sources": [
+            "res://addons/godot_synty_asset_helper/fantasy_kingdom/Source_Files/FBX/",
+            "res://addons/godot_synty_asset_helper/fantasy_kingdom/Source_Files/BonusFBX/"
+        ],
+        "target_folders": [
+            "res://addons/godot_synty_asset_helper/fantasy_kingdom/meshes/",
+            "res://addons/godot_synty_asset_helper/fantasy_kingdom/meshes/props/",
+            "res://addons/godot_synty_asset_helper/fantasy_kingdom/meshes/items/",
+            "res://addons/godot_synty_asset_helper/fantasy_kingdom/meshes/buildings/",
+            "res://addons/godot_synty_asset_helper/fantasy_kingdom/meshes/environment/",
+            "res://addons/godot_synty_asset_helper/fantasy_kingdom/meshes/weapons/"
+        ]
+    }
+}

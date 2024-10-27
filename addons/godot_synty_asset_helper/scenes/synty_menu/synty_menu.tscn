@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg1lyg6yacxp0"]
+
+[ext_resource type="Script" path="res://addons/godot_synty_asset_helper/scenes/synty_menu/SyntyMenu.gd" id="1_1lc68"]
+[ext_resource type="Script" path="res://addons/godot_synty_asset_helper/scenes/synty_menu/SyntyImportButton.gd" id="2_8inon"]
+
+[node name="Synty" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1lc68")
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="fantasy_kingdom" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "POLYGON - Fantasy Kingdom"
+script = ExtResource("2_8inon")
+
+[node name="apocalypse" type="Button" parent="Buttons"]
+layout_mode = 2
+disabled = true
+text = "POLYGON - Apocalypse"
+script = ExtResource("2_8inon")
+
+[connection signal="import_pressed" from="Buttons/fantasy_kingdom" to="." method="_on_import_button_pressed"]
+[connection signal="import_pressed" from="Buttons/apocalypse" to="." method="_on_import_button_pressed"]
